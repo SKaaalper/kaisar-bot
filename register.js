@@ -24,7 +24,7 @@ async function loginUser(email, password) {
         if (response.data) {
             const token = response.data.data.accessToken;
             console.log(`Login successful for ${email} Token:`, token);
-            
+
             saveTokenToFile(token);
         } else {
             console.error(`Login failed for ${email}:`, response.data.message);
@@ -42,6 +42,7 @@ async function registerUser(email, password) {
                 ...headers,
                 email: email,
                 password: password,
+                referrer: 'WUdtKl217'
             }
         );
         if (response.data) {
@@ -67,8 +68,8 @@ async function processAllUsers() {
 
         rl.question("Enter the password for your account: ", async (password) => {
             for (const email of emailList) {
-                await new Promise(resolve => setTimeout(resolve, 1000)); 
-                await registerUser(email, password); 
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                await registerUser(email, password);
             }
             rl.close();
         });

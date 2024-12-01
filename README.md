@@ -38,16 +38,18 @@ Transform your compute power into real earnings
    npm install
    ```
 3. Edit `emails.txt` file
-   
-4. Run below code **TWICE** if you are going to **register** a new account. If you already have an account, run only **ONCE** 
+
+4. Edit `proxy.txt` if you want to use proxy, otherwise, leave it as it is.
+
+5. Run below code **TWICE** if you are going to **register** a new account. If you already have an account, run only **ONCE**
    ```bash
    npm run register
    ```
-5. Create Extension ID for new account
+6. Create Extension ID for new account
    ```bash
    npm run setup
    ```
-6. Run the bot:
+7. Run the bot:
    ```bash
    npm run start
    ```

@@ -1,16 +1,20 @@
 import * as Upils from './utils/exporter.js';
 
 async function pingAndUpdate(token, extensionId, proxy) {
-    const agent = new Upils.HttpsProxyAgent(proxy);
-
-    const apiClient = Upils.axios.create({
+    const config = {
         baseURL: 'https://zero-api.kaisar.io/',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}` 
+            Authorization: `Bearer ${token}`,
         },
-        agent,
-    });
+    };
+
+    if (proxy !== 'http://user:pass@ip:port') {
+        const agent = new HttpsProxyAgent(proxy);
+        config.httpsAgent = agent; // Add the proxy agent to the configuration
+    }
+
+    const apiClient = Upils.axios.create(config);
 
     try {
         const response = await apiClient.post('/extension/ping', {
@@ -18,7 +22,7 @@ async function pingAndUpdate(token, extensionId, proxy) {
         });
 
         Upils.logger(`[${extensionId}] Ping response:`, 'info', response.data.data);
-        await Upils.getMiningData(apiClient, extensionId);  
+        await Upils.getMiningData(apiClient, extensionId);
     } catch (error) {
         Upils.logger(`[${extensionId}] Ping error with proxy ${proxy}`, 'error');
     }
@@ -35,7 +39,7 @@ async function pingAndUpdate(token, extensionId, proxy) {
         return;
     }
 
-    const lastExecution = {}; 
+    const lastExecution = {};
 
     while (true) {
         const now = Date.now();
@@ -62,3 +66,5 @@ async function pingAndUpdate(token, extensionId, proxy) {
         await new Promise(resolve => setTimeout(resolve, 60000)); // Wait for 1 minute
     }
 })();
+
+export const getUseProxy = () => useProxy;
