@@ -38,18 +38,42 @@ Transform your compute power into real earnings
    npm install
    ```
 3. Edit `emails.txt` file
+   ```
+   nano emails.txt
+   ```
 
 4. Edit `proxy.txt` if you want to use proxy, otherwise, leave it as it is.
+   ```
+   nano proxy.txt
+   ```
 
 5. Run below code **TWICE** if you are going to **register** a new account. If you already have an account, run only **ONCE**
    ```bash
    npm run register
    ```
-6. Create Extension ID for new account
+   * Enter your password
+   * copy the token start with `eyJhbGciOiJIUzI1`
+     
+6. Create `tokens.txt` file
+   ```
+   nano tokens.txt
+   ```
+   * Paste your tokens start with `eyJhbGciOiJIUzI1`
+   * Ctrl + O then enter to `save`
+   * Ctrl + X to `exit`
+  
+7. Create Extension ID for `new account`
    ```bash
    npm run setup
    ```
-7. Run the bot:
+   * save it and paste to `id.txt` file
+   
+8. Create `id.txt` file
+   ```
+   nano id.txt
+   ```
+     
+9. Run the bot:
    ```bash
    npm run start
    ```
