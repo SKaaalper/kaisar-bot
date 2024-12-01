@@ -7,4 +7,4 @@ export const banner = `
    ╚══════╝╚══════╝╚═╝  ╚═╝     ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝
             Running Kaisar Node BETA EXTENSION CLI Version
                   Modified by: t.me/kruukruu_airdrop                
-                       Credits to: @zlkcyber                   `
+                       Credits to: t.me/zlkcyber                   `
