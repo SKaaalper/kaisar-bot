@@ -30,22 +30,24 @@ Transform your compute power into real earnings
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Zlkcyber/kaisar-bot.git
+   git clone https://github.com/raymundedgar/kaisar-bot.git
    cd kaisar-bot
    ```
 2. install dependencies:
    ```bash
    npm install
    ```
-3. Register or Login to get Access Token
+3. Edit `emails.txt` file
+   
+4. Run below code **TWICE** if you are going to **register** a new account. If you already have an account, run only **ONCE** 
    ```bash
    npm run register
    ```
-4. Create Extension ID for new account
+5. Create Extension ID for new account
    ```bash
    npm run setup
    ```
-5. Run the bot:
+6. Run the bot:
    ```bash
    npm run start
    ```
