@@ -5,6 +5,6 @@ export const banner = `
     ███╔╝  ██║     ██╔═██╗     ██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗
    ███████╗███████╗██║  ██╗    ╚██████╗   ██║   ██████╔╝███████╗██║  ██║
    ╚══════╝╚══════╝╚═╝  ╚═╝     ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝
-            Running Kaisar Node BETA EXTENSION CLI Version
-                  Modified by: t.me/kruukruu_airdrop                
-                       Credits to: t.me/zlkcyber                   `
+            Running Kaisar Node BETA EXTENSION CLI Version               
+                       Credits to: t.me/zlkcyber
+                  Modified by: t.me/kruukruu_airdrop                    `
