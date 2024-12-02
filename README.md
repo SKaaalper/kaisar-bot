@@ -30,7 +30,7 @@ Transform your compute power into real earnings
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/raymundedgar/kaisar-bot.git
+   git clone https://github.com/SKaaalper/kaisar-bot.git
    cd kaisar-bot
    ```
 2. install dependencies:
